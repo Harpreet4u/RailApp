@@ -19,7 +19,8 @@ end
  end
 
  def index
-  @posts = Post.all
+  #@paginator, @post = paginate :posts,
+  @posts = Post.paginate :per_page => 5, :page => params[:page]
  end
 
  def create
