@@ -26,6 +26,9 @@ post from being saved: </h2>
  </p>
 
 <p>
+	<%= f.label :tag_list %><br>
+	<%= f.text_field :tag_list, { :placeholder => "Tagged separated by commas" } %>
+</p>
 <%= f.label :avatar %><br>
 <%= f.file_field :avatar %>
 </p>

@@ -23,6 +23,11 @@ this post from being saved:</h2>
   <%= f.text_area :text %>
  </p>
 
+<p>
+	<%= f.label :tag_list %><br>
+	<%= f.text_field :tag_list, { :placeholder => "Tags separated by commas."} %>
+</p>
+
  <p>
 	<%= f.label :avatar %>
 	<%= f.file_field :avatar %>

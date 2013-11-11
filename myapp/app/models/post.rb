@@ -3,4 +3,7 @@ class Post < ActiveRecord::Base
  has_attached_file :avatar, :style => { :medium => "300x300>", :thumb => "100x100>"},
 :default_url => "/images/:style/missing.png"
  validates :title, presence: true, length: { minimum: 5 }
+
+#attr_accessible :tag_list
+acts_as_taggable
 end
