@@ -9,5 +9,7 @@ Logged in as <strong><%= current_user.email %> </strong>.<br>
 
 <%= link_to 'Sign up', new_user_registration_path %><br>
 <%= link_to 'Login', new_user_session_path %><br>
+
+<%= link_to "Sign in with facebook", user_omniauth_authorize_path(:facebook) %>
 <% end %>
 <%= link_to "My Blog", controller: "posts" %>

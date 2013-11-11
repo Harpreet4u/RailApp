@@ -1,5 +1,5 @@
 Myapp::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   #get "welcome/index"
   resources :posts do 
    resources :comments
@@ -10,6 +10,7 @@ Myapp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  #match '/auth/:provider/callback' => 'users#facebook_login'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
